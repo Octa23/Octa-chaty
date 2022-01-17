@@ -1,0 +1,33 @@
+{"posts" : [
+  {
+    "id": "0",
+    "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
+    "displayName": "Octavio Rossi",
+    "message": "Que calor que esta haciendo Por favorrr!"},
+  {
+    "id": "1",
+    "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
+    "displayName": "Octavio Rossi",
+    "message": "Por suerte ya esta por llover"
+  },
+  {
+    "id": "2",
+    "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
+    "displayName": "Octavio Rossi",
+    "message": "Salgan con campera porque va a refrescar jajajajaja"
+  },
+  {
+    "id": "3",
+    "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
+    "displayName": "Octavio Rossi",
+    "message":
+    "I found out for myself that placing favicon in _app.js makes more sense. This file is most likely to exist already for setting up a layout for the pages or something like this. And you can add Head tag literally anywhere (see the docs) Add a theme.colors object to provide colors for your project. By default these colors can be referenced by the color, borderColor, backgroundColor, fill, stroke, styles. We recommend adding a palette that ranges from 50 to 900. Tools like Themera, Smart Swatch, Coolors or Palx are available to generate these palettes."
+  },
+  {
+    "id": "4",
+    "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
+    "displayName": "Octavio Rossi",
+    "message":
+    "I found out for myself that placing favicon in _app.js makes more sense. This file is most likely to exist already for setting up a layout for the pages or something like this. And you can add Head tag literally anywhere (see the docs) Add a theme.colors object to provide colors for your project. By default these colors can be referenced by the color, borderColor, backgroundColor, fill, stroke, styles. We recommend adding a palette that ranges from 50 to 900. Tools like Themera, Smart Swatch, Coolors or Palx are available to generate these palettes."
+  }
+]}

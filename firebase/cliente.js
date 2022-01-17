@@ -13,18 +13,20 @@ const firebaseConfig = {
 };
 
 try {
-  const app = initializeApp(firebaseConfig);
+  initializeApp(firebaseConfig);
 } catch (e) {
-  console.log(e);
+  alert(e);
 }
 const auth = getAuth();
 
 export const onAuthStateChange = (onChange) => {
   return onAuthStateChanged(auth, (user) => {
-    const {displayName, photoURL, email} = user;
-    const usuario = {displayName, photoURL, email};
+    if (user) {
+      const {displayName, photoURL, email} = user;
+      const usuario = {displayName, photoURL, email};
 
-    onChange(usuario);
+      onChange(usuario);
+    }
   });
 };
 

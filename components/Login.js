@@ -1,38 +1,40 @@
-import {Button, Center, Image, Stack, Text} from "@chakra-ui/react";
+import {Button, Center, Image, Link, Stack, Text} from "@chakra-ui/react";
 import {useContext} from "react";
 import {FaGithub} from "react-icons/fa";
 
 import UserContext from "../context/UserContext";
 
+import Avatar from "./Avatar";
+
 const Login = () => {
   const {user, handleClick} = useContext(UserContext);
 
   return (
-    <Center boxShadow={"dark-lg"} h={"80vh"} m={"auto"} my={"10%"} w={"80vw"}>
-      <Center as={Stack} gap={5} px={10}>
-        <Stack alignItems={"center"} textAlign={"center"}>
+    <Center bg={"white"} borderRadius={5} boxShadow={"dark-lg"} h={"500px"} m={"auto"}>
+      <Stack alignItems={"center"} h={"100%"} justifyContent={"center"} px={10}>
+        <Stack alignItems={"center"} flex={user && 1} justifyContent={"end"} textAlign={"center"}>
           <Image src="/conversation.png" w={90} />
-          <Text fontSize={30} fontWeight={"thin"}>
+          <Text fontSize={30} fontWeight={500}>
             Octa Chaty
           </Text>
+          <Text fontSize={20} fontWeight={300} m={0} textAlign={"center"}>
+            New live message web application!
+          </Text>
         </Stack>
-        <Text fontSize={20} fontWeight={"thin"} m={0} textAlign={"center"}>
-          New live message web aplicattion!
-        </Text>
         {!user ? (
-          <Button fontSize={20} leftIcon={<FaGithub />} onClick={handleClick}>
+          <Button fontSize={20} fontWeight={300} leftIcon={<FaGithub />} onClick={handleClick}>
             Ingresar con Github
           </Button>
         ) : (
-          <Stack alignItems={"center"} direction={"row"}>
-            <Image rounded={"full"} src={user.photoURL} w={"70px"} />
-            <Stack spacing={0}>
-              <Text>Hola {user.displayName}</Text>
-              <Text> {user.email}</Text>
-            </Stack>
+          <Stack alignItems={"center"} flex={1} justifyContent={"space-evenly"}>
+            <Text fontSize={40} fontWeight={300}>
+              ¡Bienvenido!
+            </Text>
+            <Avatar size={20} />
+            <Link href="/Home">Ir hacia la home</Link>
           </Stack>
         )}
-      </Center>
+      </Stack>
     </Center>
   );
 };
