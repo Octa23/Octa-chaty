@@ -7,7 +7,7 @@ import UserContext from "../context/UserContext";
 import Avatar from "./Avatar";
 
 const Login = () => {
-  const {user, handleClick} = useContext(UserContext);
+  const {user, handleClick, handleLogout} = useContext(UserContext);
 
   return (
     <Center bg={"white"} borderRadius={5} boxShadow={"dark-lg"} h={"500px"} m={"auto"}>
@@ -32,6 +32,7 @@ const Login = () => {
             </Text>
             <Avatar size={20} />
             <Link href="/Home">Ir hacia la home</Link>
+            <Button onClick={handleLogout}>Log Out</Button>
           </Stack>
         )}
       </Stack>

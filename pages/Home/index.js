@@ -1,14 +1,13 @@
-import {Box, Divider, Image, Stack, Text} from "@chakra-ui/react";
-import {useEffect, useState} from "react";
+import {Button, Input, Stack, Text} from "@chakra-ui/react";
+import {useRouter} from "next/router";
+import {useContext, useEffect} from "react";
 
+import Chat from "../../components/Chat";
+import UserContext from "../../context/UserContext";
+import useChat from "../../hooks/useChat";
 const Home = () => {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetch("http://192.168.1.12:4000/posts").then((response) => {
-      response.json().then(setPosts);
-    });
-  }, []);
+  const {message, handlepost, handlechange, posts} = useChat();
+  const {user} = useContext(UserContext);
 
   return (
     <>
@@ -28,23 +27,7 @@ const Home = () => {
           Inicio
         </Text>
       </Stack>
-      <Box px={5} py={"60px"}>
-        {posts &&
-          posts.map((post) => {
-            return (
-              <Box key={post.id}>
-                <Stack direction={"row"}>
-                  <Image h={10} rounded={"full"} src={post.avatar} w={10} />
-                  <Stack pl={2} spacing={-1}>
-                    <Text>{post.displayName}</Text>
-                    <Text fontWeight={300}>{post.message}</Text>
-                  </Stack>
-                </Stack>
-                <Divider my={2} overflow={"hidden"} zIndex={-10} />
-              </Box>
-            );
-          })}
-      </Box>
+      {user && <Chat posts={posts} />}
       <Stack
         alignItems={"center"}
         as={"header"}
@@ -53,13 +36,22 @@ const Home = () => {
         bottom={0}
         direction={"row"}
         h={"50px"}
+        p={4}
         position={"fixed"}
         w={"100%"}
         zIndex={10}
       >
-        <Text fontSize={20} fontWeight={700} px={5}>
-          Footer
-        </Text>
+        <form style={{display: "flex", width: "100%", gap: "10px"}} onSubmit={handlepost}>
+          <Input
+            fontSize={20}
+            fontWeight={700}
+            placeholder="Text here..."
+            px={5}
+            value={message}
+            onChange={handlechange}
+          />
+          <Button type="submit">Enviar</Button>
+        </form>
       </Stack>
     </>
   );
