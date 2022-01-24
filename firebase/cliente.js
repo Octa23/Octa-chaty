@@ -1,5 +1,11 @@
 import "firebase/compat/auth";
-import {getAuth, onAuthStateChanged, GithubAuthProvider, signInWithPopup} from "firebase/auth";
+import {
+  getAuth,
+  onAuthStateChanged,
+  GithubAuthProvider,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
 import {initializeApp} from "firebase/app";
 
 const firebaseConfig = {
@@ -26,8 +32,16 @@ export const onAuthStateChange = (onChange) => {
       const usuario = {displayName, photoURL, email};
 
       onChange(usuario);
+    } else {
+      const usuario = null;
+
+      onChange(usuario);
     }
   });
+};
+
+export const Logout = () => {
+  return signOut(auth);
 };
 
 export const loginWithGitHub = () => {

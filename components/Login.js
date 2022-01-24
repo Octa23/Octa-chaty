@@ -1,4 +1,4 @@
-import {Button, Center, Image, Link, Stack, Text} from "@chakra-ui/react";
+import {Button, Center, Image, Link, Stack, Text, useColorMode} from "@chakra-ui/react";
 import {useContext} from "react";
 import {FaGithub} from "react-icons/fa";
 
@@ -7,11 +7,18 @@ import UserContext from "../context/UserContext";
 import Avatar from "./Avatar";
 
 const Login = () => {
-  const {user, handleClick, handleLogout} = useContext(UserContext);
+  const {user, handleLogin, handleLogout} = useContext(UserContext);
+  const {colorMode} = useColorMode();
 
   return (
-    <Center bg={"white"} borderRadius={5} boxShadow={"dark-lg"} h={"500px"} m={"auto"}>
-      <Stack alignItems={"center"} h={"100%"} justifyContent={"center"} px={10}>
+    <Center
+      bg={colorMode === "dark" ? "gray.900" : "gray.300"}
+      borderRadius={5}
+      boxShadow={"dark-lg"}
+      h={"500px"}
+      m={"auto"}
+    >
+      <Stack alignItems={"center"} h={"100%"} justifyContent={"space-evenly"} px={10}>
         <Stack alignItems={"center"} flex={user && 1} justifyContent={"end"} textAlign={"center"}>
           <Image src="/conversation.png" w={90} />
           <Text fontSize={30} fontWeight={500}>
@@ -22,7 +29,7 @@ const Login = () => {
           </Text>
         </Stack>
         {!user ? (
-          <Button fontSize={20} fontWeight={300} leftIcon={<FaGithub />} onClick={handleClick}>
+          <Button fontSize={20} fontWeight={300} leftIcon={<FaGithub />} onClick={handleLogin}>
             Ingresar con Github
           </Button>
         ) : (
@@ -30,7 +37,7 @@ const Login = () => {
             <Text fontSize={40} fontWeight={300}>
               ¡Bienvenido!
             </Text>
-            <Avatar size={20} />
+            {user && <Avatar size={20} user={user} />}
             <Link href="/Home">Ir hacia la home</Link>
             <Button onClick={handleLogout}>Log Out</Button>
           </Stack>

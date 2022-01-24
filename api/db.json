@@ -7,262 +7,94 @@
       "message": "Que calor que esta haciendo Por favorrr!"
     },
     {
-      "id": "1",
+      "id": 0.5808378384347874,
       "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
       "displayName": "Octavio Rossi",
-      "message": "Por suerte ya esta por llover"
+      "message": "Hola que tal tu como estas?"
     },
     {
-      "id": "2",
+      "id": 0.9474759276376585,
       "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
       "displayName": "Octavio Rossi",
-      "message": "Salgan con campera porque va a refrescar jajajajaja"
+      "message": "Hola que tal"
     },
     {
-      "id": "3",
+      "id": 0.5206429841923719,
+      "avatar": "https://avatars.githubusercontent.com/u/98218117?v=4",
+      "displayName": "Guillermo Nes",
+      "message": "Esto es una preuba"
+    },
+    {
+      "id": 0.716892167791457,
+      "avatar": "https://avatars.githubusercontent.com/u/98218117?v=4",
+      "displayName": "Guillermo Nes",
+      "message": "Algo..."
+    },
+    {
+      "id": 0.19589536138805896,
       "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
       "displayName": "Octavio Rossi",
-      "message": "I found out for myself that placing favicon in _app.js makes more sense. This file is most likely to exist already for setting up a layout for the pages or something like this. And you can add Head tag literally anywhere (see the docs) Add a theme.colors object to provide colors for your project. By default these colors can be referenced by the color, borderColor, backgroundColor, fill, stroke, styles. We recommend adding a palette that ranges from 50 to 900. Tools like Themera, Smart Swatch, Coolors or Palx are available to generate these palettes."
+      "message": "Un aspecto negativo de nuestro enfoque es lo complicado que es implementar el frontend. La implementación de una nueva versión requiere generar una nueva compilación de producción del frontend y copiarla en el repositorio de backend. Esto dificulta la creación de una canalización de implementación automatizada. La canalización de implementación significa una forma automatizada y controlada de mover el código desde la computadora del desarrollador a través de diferentes pruebas y controles de calidad al entorno de producción."
     },
     {
-      "id": "4",
+      "id": 0.889505563495752,
       "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
       "displayName": "Octavio Rossi",
-      "message": "I found out for myself that placing favicon in _app.js makes more sense. This file is most likely to exist already for setting up a layout for the pages or something like this. And you can add Head tag literally anywhere (see the docs) Add a theme.colors object to provide colors for your project. By default these colors can be referenced by the color, borderColor, backgroundColor, fill, stroke, styles. We recommend adding a palette that ranges from 50 to 900. Tools like Themera, Smart Swatch, Coolors or Palx are available to generate these palettes."
+      "message": "Un aspecto negativo de nuestro enfoque es lo complicado que es implementar el frontend. La implementación de una nueva versión requiere generar una nueva compilación de producción del frontend y copiarla en el repositorio de backend. Esto dificulta la creación de una canalización de implementación automatizada. La canalización de implementación significa una forma automatizada y controlada de mover el código desde la computadora del desarrollador a través de diferentes pruebas y controles de calidad al entorno de producción."
     },
     {
-      "id": "5",
+      "id": 0.9131942057717928,
       "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
       "displayName": "Octavio Rossi",
-      "message": "I found out for myself that placing favicon in _app.js makes more sense. This file is most likely to exist already for setting up a layout for the pages or something like this. And you can add Head tag literally anywhere (see the docs) Add a theme.colors object to provide colors for your project. By default these colors can be referenced by the color, borderColor, backgroundColor, fill, stroke, styles. We recommend adding a palette that ranges from 50 to 900. Tools like Themera, Smart Swatch, Coolors or Palx are available to generate these palettes."
+      "message": "Un aspecto negativo de nuestro enfoque es lo complicado que es implementar el frontend. La implementación de una nueva versión requiere generar una nueva compilación de producción del frontend y copiarla en el repositorio de backend. Esto dificulta la creación de una canalización de implementación automatizada. La canalización de implementación significa una forma automatizada y controlada de mover el código desde la computadora del desarrollador a través de diferentes pruebas y controles de calidad al entorno de producción."
     },
     {
-      "id": "6",
+      "id": 0.621679888325366,
       "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
       "displayName": "Octavio Rossi",
-      "message": "I found out for myself that placing favicon in _app.js makes more sense. This file is most likely to exist already for setting up a layout for the pages or something like this. And you can add Head tag literally anywhere (see the docs) Add a theme.colors object to provide colors for your project. By default these colors can be referenced by the color, borderColor, backgroundColor, fill, stroke, styles. We recommend adding a palette that ranges from 50 to 900. Tools like Themera, Smart Swatch, Coolors or Palx are available to generate these palettes."
+      "message": "Prueba desde el celu"
     },
     {
-      "id": "7",
+      "id": 0.23692535200777032,
       "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
       "displayName": "Octavio Rossi",
-      "message": "I found out for myself that placing favicon in _app.js makes more sense. This file is most likely to exist already for setting up a layout for the pages or something like this. And you can add Head tag literally anywhere (see the docs) Add a theme.colors object to provide colors for your project. By default these colors can be referenced by the color, borderColor, backgroundColor, fill, stroke, styles. We recommend adding a palette that ranges from 50 to 900. Tools like Themera, Smart Swatch, Coolors or Palx are available to generate these palettes."
+      "message": "Hola como va eso? 😇"
     },
     {
-      "id": "8",
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "I found out for myself that placing favicon in _app.js makes more sense. This file is most likely to exist already for setting up a layout for the pages or something like this. And you can add Head tag literally anywhere (see the docs) Add a theme.colors object to provide colors for your project. By default these colors can be referenced by the color, borderColor, backgroundColor, fill, stroke, styles. We recommend adding a palette that ranges from 50 to 900. Tools like Themera, Smart Swatch, Coolors or Palx are available to generate these palettes."
+      "id": 0.14456896725267177,
+      "avatar": "https://avatars.githubusercontent.com/u/98337281?v=4",
+      "displayName": "Emanuel Caran",
+      "message": "Ok Probando foto"
     },
     {
-      "id": "9",
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "I found out for myself that placing favicon in _app.js makes more sense. This file is most likely to exist already for setting up a layout for the pages or something like this. And you can add Head tag literally anywhere (see the docs) Add a theme.colors object to provide colors for your project. By default these colors can be referenced by the color, borderColor, backgroundColor, fill, stroke, styles. We recommend adding a palette that ranges from 50 to 900. Tools like Themera, Smart Swatch, Coolors or Palx are available to generate these palettes."
+      "id": 0.15841847873591997,
+      "avatar": "https://avatars.githubusercontent.com/u/98337281?v=4",
+      "displayName": "Emanuel Caran",
+      "message": "Alo"
     },
     {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "hola",
-      "id": "f3goLEs"
+      "id": 0.9639022072478209,
+      "avatar": "https://avatars.githubusercontent.com/u/98337281?v=4",
+      "displayName": "Emanuel Caran",
+      "message": "OK"
     },
     {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "hola",
-      "id": "J4ubA8B"
+      "id": 0.614379003523019,
+      "avatar": "https://avatars.githubusercontent.com/u/98337281?v=4",
+      "displayName": "Emanuel Caran",
+      "message": "asd"
     },
     {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "hola",
-      "id": "bb9my2O"
+      "id": 0.31934138517528843,
+      "avatar": "https://avatars.githubusercontent.com/u/98337281?v=4",
+      "displayName": "Emanuel Caran",
+      "message": "Listo solucionado"
     },
     {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "Tercer mensaje",
-      "id": "TniqoAV"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "hola",
-      "id": "zJzBOs5"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "a",
-      "id": "40sCMyn"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "d",
-      "id": "qGVSwXF"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "algo",
-      "id": "NKB593B"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "dsa",
-      "id": "KpKW2Bu"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "ss",
-      "id": "Jq2XYfK"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "camarada",
-      "id": "rzvvI38"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "Buenisimo",
-      "id": "hxPDCHa"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "Ahora si",
-      "id": "tsK3V5-"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "asd",
-      "id": "9Xxm2US"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "algo",
-      "id": "G2oHxyD"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "Prueba desde el celu",
-      "id": "mSehBJS"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/97866109?v=4",
-      "displayName": null,
-      "message": "Preuba con otro perfil",
-      "id": "_iZAMB_"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/97866109?v=4",
-      "displayName": null,
-      "message": "asd",
-      "id": "QdHu-w5"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/97866109?v=4",
-      "displayName": null,
-      "message": "dd",
-      "id": "OnwLpEV"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "Algo mas",
-      "id": "NBFGsPV"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "a",
-      "id": "kKSigFD"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "a",
-      "id": "8AFW7Gs"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "dsa",
-      "id": "41gVG9l"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "hola",
-      "id": "oLb1v0P"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "Algo",
-      "id": "GrWs3oH"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "Bueno",
-      "id": "mzinwkC"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "a",
-      "id": "Ynr9F3N"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "d",
-      "id": "CnBAC7Y"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "asdasdasdasdaddddddddddddddddddddddddddddddddddddddd",
-      "id": "HYp2wba"
-    },
-    {
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "s",
-      "id": "SF0JsJn"
-    },
-    {
-      "id": 0.2771860869984575,
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "a"
-    },
-    {
-      "id": 0.032767773464263295,
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "s"
-    },
-    {
-      "id": 0.617409204649743,
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "2"
-    },
-    {
-      "id": 0.419232127111991,
-      "avatar": "https://avatars.githubusercontent.com/u/82550541?v=4",
-      "displayName": "Octavio Rossi",
-      "message": "aasdasd"
+      "id": 0.49586862440364854,
+      "avatar": "https://avatars.githubusercontent.com/u/98337281?v=4",
+      "displayName": "Emanuel Caran",
+      "message": "1235444"
     }
   ]
 }

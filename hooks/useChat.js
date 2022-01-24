@@ -3,8 +3,8 @@ import {useContext, useEffect, useState} from "react";
 import UserContext from "../context/UserContext";
 
 const useChat = () => {
-  const [posts, setPosts] = useState([]);
   const {user} = useContext(UserContext);
+  const [posts, setPosts] = useState([]);
   const [message, setMessage] = useState("");
   const handlechange = (e) => {
     setMessage(e.target.value);
@@ -12,22 +12,26 @@ const useChat = () => {
 
   const handlepost = (e) => {
     e.preventDefault();
-    const data = {
-      id: Math.random(),
-      avatar: user.photoURL,
-      displayName: user.displayName,
-      message: message,
-    };
+    if (!message) {
+      return;
+    } else {
+      const data = {
+        id: Math.random(),
+        avatar: user.photoURL,
+        displayName: user.displayName,
+        message: message,
+      };
 
-    fetch("http://192.168.1.12:4000/posts", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then(setPosts([...posts, data]));
-    setMessage("");
+      fetch("http://192.168.1.12:4000/posts", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then(setPosts([...posts, data]));
+      setMessage("");
+    }
   };
 
   useEffect(() => {

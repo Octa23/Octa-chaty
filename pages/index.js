@@ -1,20 +1,9 @@
 import Head from "next/head";
 import {Stack} from "@chakra-ui/react";
-import {useContext, useEffect} from "react";
-import {useRouter} from "next/router";
 
 import Login from "../components/Login";
-import UserContext from "../context/UserContext";
 
 export default function Home() {
-  const {user} = useContext(UserContext);
-
-  const router = useRouter();
-
-  useEffect(() => {
-    user && router.push("/Home");
-  }, [user]);
-
   return (
     <Stack
       bgImage="url('/18307.jpg')"

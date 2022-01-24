@@ -19,7 +19,7 @@ const Chat = ({posts}) => {
             <Box key={post.id}>
               <Stack direction={"row"}>
                 <Image h={10} rounded={"full"} src={post.avatar} w={10} />
-                <Stack ref={messagesEndRef} pl={2} spacing={-1}>
+                <Stack ref={messagesEndRef} pl={2} pr={10} spacing={-1} w={"100%"}>
                   <Text>{post.displayName}</Text>
                   <Text fontWeight={300}>{post.message}</Text>
                 </Stack>
