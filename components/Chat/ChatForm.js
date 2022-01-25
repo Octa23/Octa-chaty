@@ -1,6 +1,8 @@
 import {Button, Input, Stack} from "@chakra-ui/react";
 
-const ChatForm = ({colorMode, message, handlepost, handlechange}) => {
+import Emojis from "./Emojis";
+
+const ChatForm = ({colorMode, message, handlepost, handlechange, handleEmoji}) => {
   return (
     <Stack
       alignItems={"center"}
@@ -15,8 +17,9 @@ const ChatForm = ({colorMode, message, handlepost, handlechange}) => {
       zIndex={10}
     >
       <form style={{display: "flex", width: "100%", gap: "10px"}} onSubmit={handlepost}>
-        <Button>🙂</Button>
+        <Emojis handleEmoji={handleEmoji} />
         <Input
+          focusBorderColor="gray.500"
           fontSize={20}
           fontWeight={"thin"}
           placeholder="Text here..."

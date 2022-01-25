@@ -6,6 +6,11 @@ const useChat = () => {
   const {user} = useContext(UserContext);
   const [posts, setPosts] = useState([]);
   const [message, setMessage] = useState("");
+
+  const handleEmoji = (e) => {
+    setMessage(message.concat(e.target.innerHTML));
+  };
+
   const handlechange = (e) => {
     setMessage(e.target.value);
   };
@@ -40,7 +45,7 @@ const useChat = () => {
     });
   }, []);
 
-  return {message, handlepost, handlechange, posts};
+  return {message, handlepost, handlechange, handleEmoji, posts};
 };
 
 export default useChat;

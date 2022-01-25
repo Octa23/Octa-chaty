@@ -18,7 +18,7 @@ const Login = () => {
       h={"500px"}
       m={"auto"}
     >
-      <Stack alignItems={"center"} h={"100%"} justifyContent={"space-evenly"} px={10}>
+      <Stack alignItems={"center"} h={"100%"} justifyContent={"center"} px={10}>
         <Stack alignItems={"center"} flex={user && 1} justifyContent={"end"} textAlign={"center"}>
           <Image src="/conversation.png" w={90} />
           <Text fontSize={30} fontWeight={500}>
@@ -38,8 +38,15 @@ const Login = () => {
               ¡Bienvenido!
             </Text>
             {user && <Avatar size={20} user={user} />}
-            <Link href="/Home">Ir hacia la home</Link>
-            <Button onClick={handleLogout}>Log Out</Button>
+            <Stack
+              alignItems={"center"}
+              direction={"row"}
+              flex={1}
+              justifyContent={"space-between"}
+            >
+              <Link href="/Home">Ir hacia la home</Link>
+              <Button onClick={handleLogout}>Log Out</Button>
+            </Stack>
           </Stack>
         )}
       </Stack>

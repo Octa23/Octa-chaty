@@ -11,7 +11,7 @@ import Header from "./Header";
 const Layout = () => {
   const {user} = useContext(UserContext);
   const {colorMode, toggleColorMode} = useColorMode();
-  const {message, posts, handlepost, handlechange} = useChat();
+  const {message, posts, handlepost, handlechange, handleEmoji} = useChat();
 
   return (
     <>
@@ -19,6 +19,7 @@ const Layout = () => {
       {user && <Chat posts={posts} user={user} />}
       <ChatForm
         colorMode={colorMode}
+        handleEmoji={handleEmoji}
         handlechange={handlechange}
         handlepost={handlepost}
         message={message}
