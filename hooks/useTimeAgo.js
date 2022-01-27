@@ -29,7 +29,7 @@ const useTimeAgo = (timestamp) => {
       const newTimeAgo = getDateDiffs(timestamp);
 
       setTimeAgo(newTimeAgo);
-    }, 10000);
+    }, 15000);
 
     return () => clearInterval(val);
   }, [timestamp]);

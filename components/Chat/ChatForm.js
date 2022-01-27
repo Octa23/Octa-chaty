@@ -1,8 +1,12 @@
 import {Button, Input, Stack} from "@chakra-ui/react";
 
+import useChat from "../../hooks/useChat";
+
 import Emojis from "./Emojis";
 
-const ChatForm = ({colorMode, message, handlepost, handlechange, handleEmoji}) => {
+const ChatForm = ({colorMode}) => {
+  const {message, handlechange, handlepost, handleEmoji} = useChat();
+
   return (
     <Stack
       alignItems={"center"}
