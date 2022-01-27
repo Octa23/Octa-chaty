@@ -2,7 +2,7 @@
 import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
 
-import {loginWithGitHub, onAuthStateChange, Logout} from "../firebase/cliente";
+import {loginWithGoogle, onAuthStateChange, Logout} from "../firebase/cliente";
 
 const useUser = () => {
   const [user, setUser] = useState();
@@ -17,7 +17,7 @@ const useUser = () => {
   }, [user]);
 
   const handleLogin = () => {
-    loginWithGitHub();
+    loginWithGoogle();
   };
   const handleLogout = () => {
     Logout();

@@ -2,13 +2,13 @@ import {Button, Center, chakra, Image, Stack, Text, useColorMode} from "@chakra-
 import {motion} from "framer-motion";
 import Link from "next/link";
 import {useContext} from "react";
-import {FaGithub} from "react-icons/fa";
+import {FaGoogle} from "react-icons/fa";
 
 import UserContext from "../context/UserContext";
 
 import Avatar from "./Avatar";
 
-const MotionBox = chakra(motion.box);
+const MotionBox = chakra(motion.div);
 
 const Login = () => {
   const {user, handleLogin, handleLogout} = useContext(UserContext);
@@ -44,8 +44,8 @@ const Login = () => {
             </Text>
           </Stack>
           {!user ? (
-            <Button fontSize={20} fontWeight={300} leftIcon={<FaGithub />} onClick={handleLogin}>
-              Ingresar con Github
+            <Button fontSize={20} fontWeight={300} leftIcon={<FaGoogle />} onClick={handleLogin}>
+              Ingresar con Google
             </Button>
           ) : (
             <Stack alignItems={"center"} flex={1} justifyContent={"space-evenly"}>

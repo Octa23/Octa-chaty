@@ -1,9 +1,9 @@
 import {
   getAuth,
   onAuthStateChanged,
-  GithubAuthProvider,
   signInWithPopup,
   signOut,
+  GoogleAuthProvider,
 } from "firebase/auth";
 import {
   getFirestore,
@@ -54,10 +54,12 @@ export const Logout = () => {
   return signOut(auth);
 };
 
-export const loginWithGitHub = () => {
-  const githubProvider = new GithubAuthProvider();
+export const loginWithGoogle = () => {
+  const googleProvider = new GoogleAuthProvider();
 
-  return signInWithPopup(auth, githubProvider);
+  return signInWithPopup(auth, googleProvider).catch(function (error) {
+    console.error(error);
+  });
 };
 
 export const addData = async ({avatar, displayName, message, userId}) => {
