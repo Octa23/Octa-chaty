@@ -3,7 +3,9 @@ import {Box, Divider, Image, Stack, Text} from "@chakra-ui/react";
 import useTimeAgo from "../../hooks/useTimeago";
 
 const Post = ({avatar, displayName, message, createAt, messagesEndRef}) => {
-  const timeago = useTimeAgo(createAt);
+  if (createdAt) {
+    const timeago = useTimeAgo(createAt);
+  }
 
   return (
     <Box>
