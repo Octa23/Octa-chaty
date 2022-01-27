@@ -60,8 +60,11 @@ const Login = () => {
                 flex={1}
                 justifyContent={"space-between"}
               >
-                <Button onClick={handleLogout}>Log Out</Button>
+                <Button fontWeight={"medium"} onClick={handleLogout}>
+                  Log Out
+                </Button>
                 <Button
+                  fontWeight={"medium"}
                   onClick={() => {
                     router.push("/Home");
                   }}
