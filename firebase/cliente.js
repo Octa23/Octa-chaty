@@ -92,7 +92,7 @@ const mapPosts = (querySnapshot) => {
 };
 
 export const listenNewPosts = (callback) => {
-  const q = query(collection(db, "messages"), orderBy("createdAt", "desc"), limit(20));
+  const q = query(collection(db, "messages"), orderBy("createdAt", "desc"), limit(40));
 
   return onSnapshot(q, (querySnapshot) => {
     callback(mapPosts(querySnapshot));
