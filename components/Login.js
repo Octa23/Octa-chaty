@@ -1,4 +1,5 @@
-import {Button, Center, Image, Link, Stack, Text, useColorMode} from "@chakra-ui/react";
+import {Button, Center, Image, Stack, Text, useColorMode} from "@chakra-ui/react";
+import Link from "next/link";
 import {useContext} from "react";
 import {FaGithub} from "react-icons/fa";
 

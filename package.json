@@ -5,8 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "json": "json-server --host 192.168.1.12 ./api/db.json --port 4000"
+    "lint": "next lint"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.7.4",
@@ -21,6 +20,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "firebase": "^9.6.3",
+    "firebase-admin": "^10.0.2",
     "framer-motion": "^5",
     "next": "12.0.8",
     "prettier": "^2.5.1",
@@ -31,7 +31,6 @@
   "devDependencies": {
     "eslint": "^8.6.0",
     "eslint-config-next": "12.0.8",
-    "generator-goncy": "^1.1.11",
-    "json-server": "^0.17.0"
+    "generator-goncy": "^1.1.11"
   }
 }

@@ -28,7 +28,7 @@ const ChatForm = ({colorMode, message, handlepost, handlechange, handleEmoji}) =
           onChange={handlechange}
         />
 
-        <Button fontWeight={"medium"} type="submit">
+        <Button fontWeight={"medium"} isDisabled={!message} type="submit">
           Enviar
         </Button>
       </form>

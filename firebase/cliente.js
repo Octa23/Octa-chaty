@@ -1,4 +1,3 @@
-import "firebase/compat/auth";
 import {
   getAuth,
   onAuthStateChanged,
@@ -6,6 +5,16 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  orderBy,
+  Timestamp,
+  query,
+  limit,
+  onSnapshot,
+} from "firebase/firestore";
 import {initializeApp} from "firebase/app";
 
 const firebaseConfig = {
@@ -24,12 +33,13 @@ try {
   alert(e);
 }
 const auth = getAuth();
+const db = getFirestore();
 
 export const onAuthStateChange = (onChange) => {
   return onAuthStateChanged(auth, (user) => {
     if (user) {
-      const {displayName, photoURL, email} = user;
-      const usuario = {displayName, photoURL, email};
+      const {displayName, photoURL, email, uid} = user;
+      const usuario = {displayName, photoURL, email, uid};
 
       onChange(usuario);
     } else {
@@ -48,4 +58,41 @@ export const loginWithGitHub = () => {
   const githubProvider = new GithubAuthProvider();
 
   return signInWithPopup(auth, githubProvider);
+};
+
+export const addData = async ({avatar, displayName, message, userId}) => {
+  try {
+    await addDoc(collection(db, "messages"), {
+      avatar,
+      displayName,
+      message,
+      userId,
+      likesCount: 0,
+      createdAt: Timestamp.fromDate(new Date()),
+    });
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+};
+
+const mapPosts = (querySnapshot) => {
+  return querySnapshot.docs.map((doc) => {
+    const data = doc.data();
+    const id = doc.id;
+    const {createdAt} = data;
+
+    return {
+      ...data,
+      id,
+      createdAt: +createdAt.toDate(),
+    };
+  });
+};
+
+export const listenNewPosts = (callback) => {
+  const q = query(collection(db, "messages"), orderBy("createdAt", "desc"), limit(20));
+
+  return onSnapshot(q, (querySnapshot) => {
+    callback(mapPosts(querySnapshot));
+  });
 };

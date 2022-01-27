@@ -1,6 +1,7 @@
 import {useContext, useEffect, useState} from "react";
 
 import UserContext from "../context/UserContext";
+import {addData, listenNewPosts} from "../firebase/cliente";
 
 const useChat = () => {
   const {user} = useContext(UserContext);
@@ -20,29 +21,22 @@ const useChat = () => {
     if (!message) {
       return;
     } else {
-      const data = {
-        id: Math.random(),
+      addData({
         avatar: user.photoURL,
         displayName: user.displayName,
         message: message,
-      };
-
-      fetch("http://192.168.1.12:4000/posts", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      }).then(setPosts([...posts, data]));
+        userId: user.uid,
+      });
       setMessage("");
     }
   };
 
   useEffect(() => {
-    fetch("http://192.168.1.12:4000/posts").then((response) => {
-      response.json().then(setPosts);
-    });
+    let unsubscribe = listenNewPosts(setPosts);
+
+    return () => {
+      unsubscribe && unsubscribe();
+    };
   }, []);
 
   return {message, handlepost, handlechange, handleEmoji, posts};

@@ -1,6 +1,7 @@
-import {Box, Divider, Image, Stack, Text} from "@chakra-ui/react";
+import {Stack} from "@chakra-ui/react";
 import {memo, useEffect, useRef} from "react";
 
+import Post from "./Post";
 const Chat = ({posts}) => {
   const messagesEndRef = useRef(null);
   const scrollToBottom = () => {
@@ -12,23 +13,21 @@ const Chat = ({posts}) => {
   }, [posts]);
 
   return (
-    <Box px={5} py={"60px"}>
+    <Stack direction={"column-reverse"} px={5} py={"60px"} spacing={0}>
       {posts &&
         posts.map((post) => {
           return (
-            <Box key={post.id}>
-              <Stack direction={"row"}>
-                <Image h={10} rounded={"full"} src={post.avatar} w={10} />
-                <Stack ref={messagesEndRef} pl={2} pr={10} spacing={-1} w={"100%"}>
-                  <Text>{post.displayName}</Text>
-                  <Text fontWeight={300}>{post.message}</Text>
-                </Stack>
-              </Stack>
-              <Divider my={2} overflow={"hidden"} zIndex={-10} />
-            </Box>
+            <Post
+              key={post.id}
+              avatar={post.avatar}
+              createAt={post.createdAt}
+              displayName={post.displayName}
+              message={post.message}
+              messagesEndRef={messagesEndRef}
+            />
           );
         })}
-    </Box>
+    </Stack>
   );
 };
 
