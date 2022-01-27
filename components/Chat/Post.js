@@ -13,7 +13,7 @@ const Post = ({avatar, displayName, message, createAt, messagesEndRef}) => {
           <Stack alignItems={"baseline"} direction={"row"}>
             <Text>{displayName}</Text>
             <Text fontSize={13} fontWeight={"thin"}>
-              {timeago}
+              {timeago && timeago}
             </Text>
           </Stack>
           <Text fontWeight={300}>{message}</Text>
