@@ -1,6 +1,6 @@
 import {Button, Center, chakra, Image, Stack, Text, useColorMode} from "@chakra-ui/react";
 import {motion} from "framer-motion";
-import Link from "next/link";
+import {useRouter} from "next/router";
 import {useContext} from "react";
 import {FaGoogle} from "react-icons/fa";
 
@@ -11,6 +11,7 @@ import Avatar from "./Avatar";
 const MotionBox = chakra(motion.div);
 
 const Login = () => {
+  const router = useRouter();
   const {user, handleLogin, handleLogout} = useContext(UserContext);
   const {colorMode} = useColorMode();
 
@@ -45,12 +46,12 @@ const Login = () => {
           </Stack>
           {!user ? (
             <Button fontSize={20} fontWeight={300} leftIcon={<FaGoogle />} onClick={handleLogin}>
-              Ingresar con Google
+              Sign in with Google
             </Button>
           ) : (
             <Stack alignItems={"center"} flex={1} justifyContent={"space-evenly"}>
               <Text fontSize={40} fontWeight={300}>
-                ¡Bienvenido!
+                ¡Welcome!
               </Text>
               {user && <Avatar size={20} user={user} />}
               <Stack
@@ -59,8 +60,14 @@ const Login = () => {
                 flex={1}
                 justifyContent={"space-between"}
               >
-                <Link href="/Home">Ir hacia la home</Link>
                 <Button onClick={handleLogout}>Log Out</Button>
+                <Button
+                  onClick={() => {
+                    router.push("/Home");
+                  }}
+                >
+                  Home
+                </Button>
               </Stack>
             </Stack>
           )}

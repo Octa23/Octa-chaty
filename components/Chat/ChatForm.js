@@ -33,7 +33,7 @@ const ChatForm = ({colorMode}) => {
         />
 
         <Button fontWeight={"medium"} isDisabled={!message} type="submit">
-          Enviar
+          Send
         </Button>
       </form>
     </Stack>

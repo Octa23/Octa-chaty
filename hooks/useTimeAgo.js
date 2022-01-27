@@ -34,8 +34,8 @@ const useTimeAgo = (timestamp) => {
     return () => clearInterval(val);
   }, [timestamp]);
 
-  const rtf = new Intl.RelativeTimeFormat("es", {
-    style: "short",
+  const rtf = new Intl.RelativeTimeFormat("en", {
+    style: "long",
   });
 
   const {value, unit} = timeAgo;
